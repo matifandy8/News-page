@@ -1,9 +1,8 @@
 import type { GetStaticProps, NextPage } from 'next'
-import { Text, Container} from "@chakra-ui/react"
+import { Text, Container,Stack,StackDivider,Box} from "@chakra-ui/react"
 import { Channel } from '../channels/type';
 import Listchannels from '../components/Listchannels';
 import Sidebar from '../components/layout/sidebar';
-import Footer from '../components/layout/footer';
 
 export const getStaticProps: GetStaticProps = async () => {
   const channels: Channel[] = await import("../channels/mock.json").then((res) => res.default);
@@ -13,9 +12,14 @@ export const getStaticProps: GetStaticProps = async () => {
 const Home: NextPage<{channels: Channel[]}> = ({channels}) =>{
   return (
     <Container bg="secondary.100" alignSelf="center" height="100%" maxWidth="container.xl" paddingX={0}>
-         <Sidebar/>
+      <Stack direction="row" divider={<StackDivider margin={0} />} height="100%" spacing={0}>
+        <Stack bg="white" justifyContent="space-between" maxWidth={275} width="100%">
+        <Sidebar/>
+        </Stack>
+        <Box width="100%">
         <Listchannels channels={channels}/>
-        <Footer/>
+        </Box>
+      </Stack>
     </Container>
   )
 }

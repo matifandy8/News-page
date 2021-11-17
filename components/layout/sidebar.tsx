@@ -16,6 +16,8 @@ import {
   BsBookmarkFill,
   BsPersonFill,
 } from "react-icons/bs";
+import { useRouter } from 'next/router'
+
 
 interface ListLink {
   href: string;
@@ -27,21 +29,27 @@ interface ListLink {
 const LINKS: ListLink[] = [
   {
     href: "/home",
-    text: "Inicio",
+    text: "Home",
     activeIcon: BsHouseFill,
     inactiveIcon: BsHouse,
   },
   {
     href: "/explore",
-    text: "Explorar",
+    text: "Explore",
     activeIcon: BsHash,
     inactiveIcon: BsHash,
   },
   {
-    href: "/notifications",
-    text: "Notificaciones",
-    activeIcon: BsBellFill,
-    inactiveIcon: BsBell,
+    href: "/saved",
+    text: "Saved",
+    activeIcon: BsBookmarkFill,
+    inactiveIcon: BsBookmark,
+  },
+  {
+    href: "/subscriptions",
+    text: "Subscriptions",
+    activeIcon: BsList,
+    inactiveIcon: BsList,
   },
   {
     href: "/messages",
@@ -50,35 +58,24 @@ const LINKS: ListLink[] = [
     inactiveIcon: BsEnvelope,
   },
   {
-    href: "/bookmarks",
-    text: "Guardados",
-    activeIcon: BsBookmarkFill,
-    inactiveIcon: BsBookmark,
-  },
-  {
-    href: "/lists",
-    text: "Listas",
-    activeIcon: BsList,
-    inactiveIcon: BsList,
-  },
-  {
-    href: "/profile",
-    text: "Perfil",
-    activeIcon: BsPersonFill,
-    inactiveIcon: BsPerson,
-  },
-  {
-    href: "/options",
-    text: "Mas opciones",
+    href: "/settings",
+    text: "Settings",
     activeIcon: BsThreeDots,
     inactiveIcon: BsThreeDots,
+  },
+  {
+    href: "/login",
+    text: "Login",
+    activeIcon: BsPersonFill,
+    inactiveIcon: BsPerson,
   },
 ];
 
 const Sidebar: React.FC<StackProps> = (props) => {
+  const router = useRouter()
 
   return (
-    <Stack fontSize="xl" fontWeight="bold" spacing={7} width="100%" {...props}>
+    <Stack borderRadius="5px" bg="white.100" fontSize="xl"  spacing={7} width="20%" {...props}>
       {LINKS.map((link) => (
         <a key={link.href} >
           <Stack
@@ -87,6 +84,7 @@ const Sidebar: React.FC<StackProps> = (props) => {
             spacing={5}
           >
             <Icon
+              as={router.pathname === link.href ? link.activeIcon : link.inactiveIcon}
               height={6}
               width={6}
             />
