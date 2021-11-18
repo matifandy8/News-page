@@ -1,15 +1,17 @@
 import {  NextPage } from "next";
 import { Channel } from "../channels/type";
 import Cardchannel from "./Cardchannel";
+import {Grid} from "@chakra-ui/react";
+
 
 
 const Listchannels: NextPage<{channels: Channel[]}> = ({channels}) => {
     return (
-        <section className="px-4 mt-24 mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <Grid templateColumns={{ base: "repeat(2, 0,5fr)", sm: "repeat(2, 1fr)", md: "repeat(3, 1fr)", lg:"repeat(5, 1fr)" }} gap={6} p={5}>
         {channels?.map((channel) => (
           <Cardchannel key={channel.id} channel={channel} />
         ))}
-      </section>
+      </Grid>
     );
   };
   

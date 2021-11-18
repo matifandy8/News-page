@@ -1,5 +1,5 @@
 import React from "react";
-import {Icon, Stack, StackProps, Text} from "@chakra-ui/react";
+import {Icon, Stack, StackProps, Text,Link} from "@chakra-ui/react";
 import {IconType} from "react-icons";
 import {
   BsEnvelope,
@@ -75,13 +75,19 @@ const Sidebar: React.FC<StackProps> = (props) => {
   const router = useRouter()
 
   return (
-    <Stack borderRadius="5px" bg="white.100" fontSize="xl"  spacing={7} width="20%" {...props}>
+   
+    <Stack marginTop={10} borderRadius="5px" bg="white.100" fontSize="md" spacing={5} width="100%" {...props}>
+    
       {LINKS.map((link) => (
-        <a key={link.href} >
+        <Link _hover={{
+          background: "secondary.100",
+          color: "tertiary.200",
+        }} key={link.href} to={link.href}>
           <Stack
             alignItems="center"
             direction="row"
             spacing={5}
+            p="2" 
           >
             <Icon
               as={router.pathname === link.href ? link.activeIcon : link.inactiveIcon}
@@ -90,7 +96,7 @@ const Sidebar: React.FC<StackProps> = (props) => {
             />
             <Text>{link.text}</Text>
           </Stack>
-        </a>
+        </Link>
       ))}
     </Stack>
   );
