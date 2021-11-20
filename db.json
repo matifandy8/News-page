@@ -1,4 +1,6 @@
-[
+
+{
+    "projects": [
     {
         "id": 1,
         "name": "Autoblog",
@@ -77,3 +79,4 @@
         "content": "In this episode of CleanTech Talk, RK Equity cofounder Howard Klein talked with me about what’s new in the EV battery market, current &amp; future supply chain concerns, Tesla’s battery progress, and… [+4329 chars]"
     }
 ]
+}
