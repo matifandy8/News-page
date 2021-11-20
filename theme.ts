@@ -19,8 +19,10 @@ export default extendTheme({
   },
   styles: {
     global: {
-      "html, body, #root": {
+      "html":{
         height: "100%",
+      },
+      "html, body, #root": {
         backgroundColor: "secondary.100",
       },
       "*::-webkit-scrollbar": {
