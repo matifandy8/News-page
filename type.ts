@@ -11,7 +11,7 @@ export interface Headline {
     title:       string;
     description: string;
     url:         string;
-    urlToImage:  null | string;
+    urlToImage:  string;
     publishedAt: Date;
     content:     string;
 }

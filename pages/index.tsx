@@ -5,7 +5,7 @@ import {
   StackDivider,
   Box,
 } from "@chakra-ui/react";
-import { Channel } from "../type";
+import { Channel, Headline } from "../type";
 import Listchannels from "../components/channels/Listchannels";
 import Sidebar from "../components/layout/sidebar";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
@@ -30,12 +30,10 @@ export async function getStaticProps() {
   });
 
   const apiResponse = await fetch(
-    "https://my-json-server.typicode.com/matifandy8/News-page/projects"
+    "https://my-json-server.typicode.com/matifandy8/News-page/headlines"
   );
-  console.log(apiResponse)
   const headlines =  await apiResponse.json();
-  console.log(headlines)
-
+  
   return {
     props: {
       channels: data.channels,
@@ -44,8 +42,7 @@ export async function getStaticProps() {
   };
 }
 
-const Home: NextPage<{ channels: Channel[],headlines:any }> = ({ channels, headlines }) => {
-  console.log(headlines)
+const Home: NextPage<{ channels: Channel[],headlines: Headline[] }> = ({ channels, headlines }) => {
   return (
     <Container
       alignSelf="center"
@@ -71,8 +68,8 @@ const Home: NextPage<{ channels: Channel[],headlines:any }> = ({ channels, headl
           <Sectionheader name="Explore Channels" />
           <Listchannels channels={channels} />
 
-          <Sectionheader headlines={headlines} name="Today's Headlines" />
-          <Headlines />
+          <Sectionheader  name="Today's Headlines" />
+          <Headlines headlines={headlines}/>
         </Box>
       </Stack>
     </Container>
