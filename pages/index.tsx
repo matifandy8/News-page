@@ -29,14 +29,23 @@ export async function getStaticProps() {
     `,
   });
 
+  const apiResponse = await fetch(
+    "https://my-json-server.typicode.com/matifandy8/News-page/projects"
+  );
+  console.log(apiResponse)
+  const headlines =  await apiResponse.json();
+  console.log(headlines)
+
   return {
     props: {
       channels: data.channels,
+      headlines: headlines
     },
   };
 }
 
-const Home: NextPage<{ channels: Channel[] }> = ({ channels }) => {
+const Home: NextPage<{ channels: Channel[],headlines:any }> = ({ channels, headlines }) => {
+  console.log(headlines)
   return (
     <Container
       alignSelf="center"
@@ -62,7 +71,7 @@ const Home: NextPage<{ channels: Channel[] }> = ({ channels }) => {
           <Sectionheader name="Explore Channels" />
           <Listchannels channels={channels} />
 
-          <Sectionheader name="Today's Headlines" />
+          <Sectionheader headlines={headlines} name="Today's Headlines" />
           <Headlines />
         </Box>
       </Stack>

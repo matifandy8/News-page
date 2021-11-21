@@ -2,7 +2,7 @@
 {
     "projects": [
     {
-        "id": 1,
+        "id": 11,
         "name": "Autoblog",
         "author": "Bloomberg",
         "title": "Self-driving startups join EVs as next stock market obsession",
@@ -13,7 +13,7 @@
         "content": "Self-driving technology companies are the latest automotive stocks to become an obsession of retail traders, with firms like Aurora Innovation Inc. surging Friday on high volume.\r\nAurora, which went … [+1254 chars]"
     },
     {
-        "id": 2,
+        "id": 12,
         "name": "The Guardian",
         "author": "Reuters",
         "title": "App outage locks hundreds of Tesla drivers out of cars",
@@ -24,18 +24,7 @@
         "content": "Hundreds of Tesla drivers were locked out of their cars at the start of the weekend after the manufacturers mobile app suffered an outage and dozens voiced their complaints on social media.\r\nElon Mus… [+1724 chars]"
     },
     {
-        "id": 2,
-        "name": "CNET",
-        "author": "Sean Szymkowski",
-        "title": "EV tax credits: Biden's bill passes House, wants to put $12,500 in your pocket",
-        "description": "The House's version of the Build Back Better bill includes massive changes to the EV tax credit system. It passed the House and now it heads to the Senate.",
-        "url": "https://www.cnet.com/roadshow/news/ev-tax-credit-biden-bill-house-passes/",
-        "urlToImage": "https://www.cnet.com/a/img/8yCUYjojSamOvAsGzdkwFRHXuqg=/1200x630/2021/04/02/3f25a247-935e-4318-827d-fd227d9fe878/ogi-model-3.jpg",
-        "publishedAt": "2021-11-20T17:00:22Z",
-        "content": "How does $8,000 back on your taxes for buying a Tesla sound? It could happen.\r\nTim Stevens/Roadshow\r\nFollowing huge changes to better incentivize electric car purchases, the US House of Representativ… [+9422 chars]"
-    },
-    {
-        "id": 3,
+        "id": 13,
         "name": "Yahoo Entertainment",
         "author": "John Csiszar",
         "title": "The Bestselling Cars in Every State — and Your Cost To Own Them",
@@ -46,7 +35,7 @@
         "content": "Although there are some recurring favorites, for the most part, the bestselling cars in America vary greatly from state to state. Part of this is a reflection of the differing lifestyles across the c… [+10542 chars]"
     },
     {
-        "id": 4,
+        "id": 14,
         "name": "Slashdot.org",
         "author": "feedfeeder",
         "title": "Tesla employee sues the company alleging sexual harassment at its California factory - The Washington Post",
@@ -57,7 +46,7 @@
         "content": "The Fine Print: The following comments are owned by whoever posted them. We are not responsible for them in any way."
     },
     {
-        "id": 5,
+        "id": 15,
         "name": "Hollywood Life",
         "author": "Cassie Gill",
         "title": "Hailey Baldwin Wears Colorful Crop Top On Date Night With Justin Bieber – Photos",
@@ -68,7 +57,7 @@
         "content": "Justin Bieber and Hailey Baldwin headed to restaurant Craig’s in West Hollywood for a night on the town!\r\nHailey Baldwin, 24, rocked colorful crop top top while out with husband Justin Bieber, 27! Th… [+2231 chars]"
     },
     {
-        "id": 6,
+        "id": 16,
         "name": "CleanTechnica",
         "author": "Zachary Shahan",
         "title": "EV Battery Supplies, New Lithium Deals, & Tesla Battery Progress — CleanTech Talk",

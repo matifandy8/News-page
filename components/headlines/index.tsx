@@ -1,4 +1,3 @@
-import { GetStaticProps, NextPage } from "next";
 import {Grid} from "@chakra-ui/react";
 import Cardheadline from "./Cardheadline";
 
@@ -15,16 +14,3 @@ export default function Projects({ headlines }:any) {
 }
 
 
-export const getServerSideProps = async (pageContext:any) => {
-  const apiResponse = await fetch(
-    "https://my-json-server.typicode.com/matifandy8/nextjs-portfolio/projects"
-  );
-
-  const headlines =  await apiResponse.json();
-
-  return {
-    props: {
-      headlines,
-    },
-  };
-};
