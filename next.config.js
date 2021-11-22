@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: false,
   images: {
-    domains: ['static.javatpoint.com', 'o.aolcdn.com', 'i.guim.co.uk', 's.yimg.com'],
+    domains: ['static.javatpoint.com', 'o.aolcdn.com', 'i.guim.co.uk', 's.yimg.com', 'www.washingtonpost.com','hollywoodlife.com', 'cleantechnica.com' ],
   },
 }

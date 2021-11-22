@@ -30,10 +30,10 @@ export async function getStaticProps() {
   });
 
   const apiResponse = await fetch(
-    "https://my-json-server.typicode.com/matifandy8/News-page/headlines"
+    "https://my-json-server.typicode.com/matifandy8/News-page/theheadlines"
   );
   const headlines =  await apiResponse.json();
-  
+
   return {
     props: {
       channels: data.channels,
