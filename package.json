@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^1.7.1",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@types/testing-library__jest-dom": "^5.14.1",
     "apollo-server": "^3.5.0",
     "apollo-server-micro": "^3.5.0",
     "axios": "^0.24.0",
@@ -26,7 +27,9 @@
     "react-slick": "^0.28.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.3",
     "@types/micro-cors": "^0.1.2",
     "@types/node": "16.11.7",
     "@types/react": "17.0.34",
