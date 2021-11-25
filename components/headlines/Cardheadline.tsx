@@ -6,8 +6,8 @@ import { Stack, Text, Flex } from "@chakra-ui/react";
 const Cardheadline = ({ headline }: { headline: Headline }): JSX.Element => {
   return (
     <Stack p={8} boxShadow={"lg"} borderRadius={8} height="1.5fr" width="2fr">
-      <Flex >
-        <Stack height="100px" width="100px">
+      <Flex justifyContent="space-between">
+        <Stack height="100px" width="100px" m="10px">
           <Image
             alt={headline.name}
             src={headline.urlToImage}
@@ -19,8 +19,9 @@ const Cardheadline = ({ headline }: { headline: Headline }): JSX.Element => {
         <Text fontWeight="bold" fontSize="lg">
           {headline.name}
         </Text> 
-        <Text fontWeight="bold" fontSize="sm">
-        {headline.name}
+    
+        <Text  fontWeight="bold" fontSize="sm" color="tertiary.200">
+        {headline.author}
       </Text>
       </Stack>
 
